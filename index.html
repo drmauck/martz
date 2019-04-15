@@ -343,7 +343,20 @@
         }, 3500);
     
         //timed bounce
-        setInterval(function(){
+      	function timedBounce () {
+	         if(martz_timer_count < 2) {
+          	$(".martz").effect("bounce", {distance: 15}, "slow");
+            martz_timer_count++;
+           } else {
+             martz_timer_count = 0;
+             $(".item").delay(0).effect("bounce", {distance: 5}, "slow");
+           }
+          setTimeout(timedBounce, 5000);
+      	}
+        setTimeout(timedBounce, 5000);
+        
+/*
+	setInterval(function(){
 	  if(martz_timer_count < 2) {
           	$(".martz").effect("bounce", {distance: 15}, "slow");
 		martz_timer_count++;
@@ -354,7 +367,7 @@
         setInterval(function(){
           $(".item").delay(0).effect("bounce", {distance: 5}, "slow");
         }, 15000);
-
+*/
         //bounce on hover
         //martz
         $(".click_martz").mouseenter(function(){
