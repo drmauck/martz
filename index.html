@@ -34,8 +34,8 @@
   letter-spacing: .15em; /* Adjust as needed */
   animation: 
     typing 3.5s steps(6, end),
-    blink-caret .5s step-end 12,
-    stop-caret 3.5s steps(1, end);
+    blink-caret .5s step-end 6,
+    stop-caret 3.6s step-end 0;
 }
 
 /* The typing effect */
@@ -52,7 +52,7 @@
 	
 /* End with no cursor */
 @keyframes stop-caret {
-  100% { border-right: .15em solid white; }
+  100% { border-color: transparent }
 }
 	
 </style>
