@@ -185,20 +185,19 @@
         <div class="col-xs-11" style="border-top:4px solid black; width:95%; position:absolute; right:0; bottom:0;"></div>
       </div>
 
-      <!-- school3 -->
+      <!-- underwater -->
       <div class="row">
         <div class="col-xs-12 col-md-8 order-xs-1 order-md-2" style="position:relative; padding: 0em 0em 0em 0em;">
-          <img src="https://github.com/drmauck/martz/blob/master/school3_bg.png?raw=true" class="img-fluid" alt="I can write!">
+          <img src="https://github.com/drmauck/martz/blob/master/underwater_bg.png?raw=true" class="img-fluid" alt="Fish!">
           <!-- martz -->
-          <img src="https://github.com/drmauck/martz/blob/master/school3_martz.png?raw=true" class="img-fluid martz" style="position:absolute; top:0; left:0;">
-          <a class="click_martz click_martz_school3" style="height:33%; width:10%; position:absolute; left:76%; top:31%; cursor:pointer; z-index:2;"></a>
+          <img src="https://github.com/drmauck/martz/blob/master/underwater_martz.png?raw=true" class="img-fluid martz" style="position:absolute; top:0; left:0;">
+          <a class="click_martz click_martz_underwater" style="height:10%; width:9%; position:absolute; left:44%; top:90%; cursor:pointer; z-index:2;"></a>
           <!-- item -->
-          <img src="https://github.com/drmauck/martz/blob/master/school3_item.png?raw=true" class="img-fluid item" style="position:absolute; top:0; left:0;">
-          <a class="click_item click_item_school3" style="height:12%; width:6%; position:absolute; left:2%; top:78%; cursor:pointer; z-index:2;"></a>
-          <img src="https://github.com/drmauck/martz/blob/master/school3_fg.png?raw=true" class="img-fluid" style="position:absolute; top:0; left:0;">
+          <img src="https://github.com/drmauck/martz/blob/master/underwater_item.png?raw=true" class="img-fluid item" style="position:absolute; top:0; left:0;">
+          <a class="click_item click_item_underwater" style="height:12%; width:9%; position:absolute; left:86%; top:46%; cursor:pointer;"></a>
         </div>
         <!-- text left -->
-        <div class="col-xs-12 col-md-4 order-xs-2 order-md-1 text_school3 invisible" style="padding: 2em 2em 2em 2em;">
+        <div class="col-xs-12 col-md-4 order-xs-2 order-md-1 text_underwater invisible" style="padding: 2em 2em 2em 2em;">
           <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">
             Text goes here!
           </div>
@@ -210,7 +209,7 @@
         <div class="col-xs-11" style="border-top:4px solid black; width:95%; position:absolute; left:0; bottom:0;"></div>
       </div>
 
-            <!-- school3 -->
+      <!-- school3 -->
       <div class="row">
         <div class="col-xs-12 col-md-8" style="position:relative; padding: 0em 0em 0em 0em;">
           <img src="https://github.com/drmauck/martz/blob/master/school3_bg.png?raw=true" class="img-fluid" alt="I can write!">
@@ -219,8 +218,9 @@
           <a class="click_martz click_martz_school3" style="height:33%; width:10%; position:absolute; left:76%; top:31%; cursor:pointer; z-index:2;"></a>
           <!-- item -->
           <img src="https://github.com/drmauck/martz/blob/master/school3_item.png?raw=true" class="img-fluid item" style="position:absolute; top:0; left:0;">
-          <a class="click_item click_item_school3" style="height:12%; width:6%; position:absolute; left:2%; top:78%; cursor:pointer; z-index:2;"></a>
+          <a class="click_item click_item_school3" style="height:12%; width:6%; position:absolute; left:2%; top:78%; cursor:pointer; z-index:3;"></a>
           <img src="https://github.com/drmauck/martz/blob/master/school3_fg.png?raw=true" class="img-fluid" style="position:absolute; top:0; left:0;">
+         <img src="https://github.com/drmauck/martz/blob/master/school3_special.png?raw=true" class="img-fluid" style="position:absolute; top:0; left:0;">
         </div>
         <!-- text left -->
         <div class="col-xs-12 col-md-4 order-xs-2 text_school3 invisible" style="padding: 2em 2em 2em 2em;">
@@ -298,6 +298,8 @@
         //timed bounce
         setInterval(function(){
           $(".martz").effect("bounce", {distance: 12}, "slow");
+        }, 10000);
+        setInterval(function(){
           $(".item").delay(5000).effect("bounce", {distance: 3}, "slow");
         }, 10000);
 
@@ -317,7 +319,7 @@
           $(".text_grandmas").replaceWith('<div class="col-xs-12 col-md-4 text_grandmas" style="padding: 1em 2em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">Long ago when I was just a small child of six years old, I was very sickly and as such often missed weeks of school at a time. Due to my illness I failed first grade and then we moved to a place called Erie in Pennsylvania where I would have to repeat first grade. I struggled with English and writing, though I did pass first grade. It was a long time ago, but I remember school was always a struggle. I worked hard to do well but my grades in English always suffered and in turn discouraged me from trying. I figured writing was not my forte and left it at that.</div></div>');
         });
         $(".click_item_grandmas").click(function(){
-          $(".text_grandmas").replaceWith('<div class="col-xs-12 col-md-4 text_grandmas" style="padding: 1em 1em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">Extra Text!</div></div>');
+          $(".text_grandmas").replaceWith('<div class="col-xs-12 col-md-4 text_grandmas" style="padding: 1em 1em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">“For all children, cognitive advances may occur in some areas if thinking and not in others, and ways of knowing are dependent on race and class, social relations, and the nature of individual experiences. Each child, in other words, may have a unique rate of development…influenced by social forced shaping the child’s home life and schooling” (Lindemann 100).</div></div>');
         });
 
         //school1
@@ -352,13 +354,22 @@
           $(".text_pond").replaceWith('<div class="col-xs-12 col-md-4 text_pond" style="padding: 1em 1em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">The only “reasonable” object near us was an enormous broken tree branch. Sue attempted to lift the heavy decaying branch, but it was too heavy. It was a task she could not undertake alone. Thus, spurred into action, I aided in lifting the branch as we brought it close to the water’s edge. Sue took the reins, steering the branch, while I held on to the back for stabilization. We coordinated for what seemed like hours, but in reality, only minutes had passed. Our bodies were racked with anxiety as Sue dipped the branch in the water over and over again, feeling around blindly in the muddy waters below. I started to believe my precious sandal had been sacrificed to the mud gods.</div></div>');
         });
 
-        //school2
+        //underwater
+        $(".click_martz_underwater").click(function(){
+          $(".text_underwater").replaceWith('<div class="col-xs-12 col-md-4 text_underwater" style="padding: 1em 1em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">Sue refused to give up. After fifteen minutes, exhaustion had set in, but in a final desperate attempt we dipped the branch back down. While we moved the branch around, it snagged on something, something we could not see. Our eyes locked in both fear and hope. Sue turned around and lifted the branch ever so delicately out of the water. There, at the end of the branch, hung…seaweed and mud. But underneath that mud held a greater treasure, like a pearl in a clam, my sandal barely visible, gleamed. However, our joy was tempered due to the fear of moving the sandal to safety. Ever so slowly, Sue and I raised the long branch until it hung over wooden bridge. We dropped the branch; the utter disbelief was clear on our faces. Victory! I ran to the bridge and unearthed my sandal from its muddy prison. Holding on tight, I washed it at the edge of the water. Our trial was officially over, but the excitement of our hard-earned success continued to course through our veins. As we walked back to the main campus, we relived the glory as my foot swished with every step as a reminder.</div></div>');
+        });
+
+        $(".click_item_underwater").click(function(){
+          $(".text_underwater").replaceWith('<div class="col-xs-12 col-md-4 text_underwater" style="padding: 1em 1em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">"what we write has a lot to do with what we see, how we learn, and how we solve problems” (Lindemann 108).</div></div>');
+        });
+
+        //school3
         $(".click_martz_school3").click(function(){
-          $(".text_school3").replaceWith('<div class="col-xs-12 col-md-4 text_school3" style="padding: 1em 1em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">Main Text!</div></div>');
+          $(".text_school3").replaceWith('<div class="col-xs-12 col-md-4 text_school3" style="padding: 1em 1em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">Sue, the brilliant teacher that she was, turned this tribulation into a teaching moment, suggesting I should write my news article based on the near-death accident of my sandal. In agreement, I immediately put pen to paper and started brainstorming how I wanted to write my article. She managed to turn my fear of writing into excitement. By creating a fun way for me to interact with writing, Sue made English accessible, laying the foundations which were primed for more knowledge. My harrowing adventure was published in the program’s journal and I still possess a copy of that article. It was not the best piece of writing, but it is a piece of writing I am proud of. That article convinced me that I should write and if someone who failed English can write then <b>anyone can write!</b></div></div>');
         });
 
         $(".click_item_school3").click(function(){
-          $(".text_school3").replaceWith('<div class="col-xs-12 col-md-4 text_school3" style="padding: 1em 1em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">Extra Text!</div></div>');
+          $(".special_school3").replaceWith('<div class="col-xs-12 col-md-4 text_school3" style="padding: 1em 1em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">Extra Text!</div></div>');
         });
 
       });  
