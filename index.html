@@ -324,7 +324,7 @@
     <script type = "text/javascript" language = "javascript">
 					
       $(document).ready(function () {
-	alert("12:48");
+	alert("1:01");
 	      			var martz_timer_count		= 0;
 				var clicked_grandmas 		= 0;
 				var clicked_school1 		= 0;
@@ -365,8 +365,17 @@
 		//grandma's
 		if(clicked_grandmas == 0) {
 			$(".martz_grandmas").effect("bounce", {distance: martz_bounce}, "slow");
-		} else {
+		} else if(clicked_grandmas == 1) {
 			$(".item_grandmas").effect("bounce", {distance: item_bounce}, "slow");
+			clicked_grandmas = 2;
+		}
+		
+		//school1
+		if(clicked_school1 == 0) {
+			$(".martz_schoo11").effect("bounce", {distance: martz_bounce}, "slow");
+		} else if(clicked_school1 == 1) {
+			$(".item_school1").effect("bounce", {distance: item_bounce}, "slow");
+			clicked_school1 = 2;
 		}
 	}, 5000);
 	      
