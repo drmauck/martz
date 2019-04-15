@@ -107,9 +107,9 @@
       <div class="row">
         <div class="col-xs-12 col-md-8" style="position:relative; padding: 0em 0em 0em 0em;">
           <img src="https://github.com/drmauck/martz/blob/master/summer_bg.png?raw=true" class="img-fluid bg_summer" alt="Summer!">
-          <!-- martz -->
+          <!-- martz
           <img src="https://github.com/drmauck/martz/blob/master/summer_martz.png?raw=true" class="img-fluid martz" style="position:absolute; top:0; left:0;">
-          <a class="click_martz click_martz_summer" style="height:32%; width:7%; position:absolute; left:42%; top:47%; cursor:pointer; z-index:2;"></a>
+          <a class="click_martz click_martz_summer" style="height:32%; width:7%; position:absolute; left:42%; top:47%; cursor:pointer; z-index:2;"></a>-->  
           <!-- item -->
           <img src="https://github.com/drmauck/martz/blob/master/summer_item.png?raw=true" class="img-fluid item" style="position:absolute; top:0; left:0;">
           <a class="click_item click_item_summer" style="height:22%; width:25%; position:absolute; left:74%; top:67%; cursor:pointer;"></a>
@@ -121,12 +121,33 @@
           </div>
         </div>
       </div>
+      <!-- spacer row -->
+      <div class="row" style="height:100px; position:relative">
+        <div class="col-xs-11" style="border:2px solid black; width:95%; position:absolute; right:0; bottom:0;"></div>
+      </div>
+      <!-- school1 -->
+      <div class="row">
+        <div class="col-xs-12 col-md-8 order-xs-1 order-md-2" style="position:relative; padding: 0em 0em 0em 0em;">
+          <img src="https://github.com/drmauck/martz/blob/master/school1_bg.png?raw=true" class="img-fluid" alt="School :(">
+          <!-- martz -->
+          <img src="https://github.com/drmauck/martz/blob/master/school1_martz.png?raw=true" class="img-fluid martz" style="position:absolute; top:0; left:0;">
+          <a class="click_martz click_martz_school1" style="height:29%; width:7%; position:absolute; left:46%; top:50%; cursor:pointer; z-index:2;"></a>
+          <!-- item -->
+          <img src="https://github.com/drmauck/martz/blob/master/school1_item.png?raw=true" class="img-fluid item" style="position:absolute; top:0; left:0;">
+          <a class="click_item click_item_school1" style="height:6%; width:11%; position:absolute; left:11.5%; top:59%; cursor:pointer;"></a>
+        </div>
+        <!-- text left -->
+        <div class="col-xs-12 col-md-4 order-xs-2 order-md-1 text_school1 invisible" style="padding: 2em 2em 2em 2em;">
+          <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">
+            Text goes here!
+          </div>
+        </div>
+      </div>
 
       <!-- spacer row -->
       <div class="row" style="height:100vh;">
         
       </div>
-
   </div>
 
     <!-- Optional JavaScript -->
@@ -170,7 +191,7 @@
         //replace text on click
         //grandmas
         $(".click_martz_grandmas").click(function(){
-          $(".text_grandmas").replaceWith('<div class="col-xs-12 col-md-4 text_grandmas" style="padding: 1em 1em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">Main Text!</div></div>');
+          $(".text_grandmas").replaceWith('<div class="col-xs-12 col-md-4 text_grandmas" style="padding: 1em 2em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">Main Text!</div></div>');
         });
         $(".click_item_grandmas").click(function(){
           $(".text_grandmas").replaceWith('<div class="col-xs-12 col-md-4 text_grandmas" style="padding: 1em 1em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">Extra Text!</div></div>');
