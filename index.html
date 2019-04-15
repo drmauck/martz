@@ -333,8 +333,8 @@
 				var clicked_pond 		    = 0;
 				var clicked_underwater 	= 0;
 				var clicked_school3 		= 0;
-	      			var martz_bounce = 15;
-	      			var item_bounce = 5;
+	      			var martz_bounce = 3;
+	      			var item_bounce = 3;
 	
         //intro down arrow blink
         setTimeout(function() {
@@ -407,7 +407,7 @@
 		} else if(clicked_school3 == 1) {
 			$(".item_school3").effect("bounce", {distance: item_bounce}, "slow");
 		}
-	}, 5000);
+	}, 10000);
 	
 	      
         //bounce on hover
