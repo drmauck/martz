@@ -33,7 +33,7 @@
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
   animation: 
-    typing 3.5s steps(6, end),
+    typing 3.0s steps(6, end),
     blink-caret .5s step-end 8;
 }
 	
@@ -47,8 +47,8 @@
   letter-spacing: .15em; /* Adjust as needed */
   animation: 
     toggle-caret 3.5s step-end,
-    typing 3.5s steps(3, end),
-    blink-caret .5s step-end 5;
+    typing 1.5s steps(3, end),
+    blink-caret .5s step-end 4;
 }
 
 /* The typing effect */
@@ -64,12 +64,8 @@
 }
 
 @keyframes toggle-caret {
-  0% {
-	opacity: 0%;  
-     }
-100% {
-	opacity: 100%;
-     }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 </style>
 <html lang="en">
