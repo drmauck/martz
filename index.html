@@ -343,20 +343,20 @@
     
         //timed bounce
         setInterval(function(){
-          $(".martz").effect("bounce", {distance: 12}, "slow");
+          $(".martz").effect("bounce", {distance: 15}, "slow");
         }, 30000);
         setInterval(function(){
-          $(".item").delay(15000).effect("bounce", {distance: 3}, "slow");
+          $(".item").delay(15000).effect("bounce", {distance: 5}, "slow");
         }, 30000);
 
         //bounce on hover
         //martz
         $(".click_martz").mouseover(function(){
-          $(".martz").effect("bounce", {distance: 12}, "slow");
+          $(".martz").effect("bounce", {distance: 15}, "slow");
         });
         //item
         $(".click_item").mouseover(function(){
-          $(".item").effect("bounce", {distance: 3}, "slow");
+          $(".item").effect("bounce", {distance: 5}, "slow");
         });
 
         //replace text on click
