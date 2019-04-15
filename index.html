@@ -325,6 +325,7 @@
 					
       $(document).ready(function () {
 	
+	      			var martz_timer_count		= 0;
 				var clicked_grandmas 		= 0;
 				var clicked_school1 		= 0;
 				var clicked_school2 		= 0;
@@ -343,7 +344,12 @@
     
         //timed bounce
         setInterval(function(){
-          $(".martz").effect("bounce", {distance: 15}, "slow");
+	  if(martz_timer_count < 2) {
+          	$(".martz").effect("bounce", {distance: 15}, "slow");
+		martz_timer_count++;
+	  } else {
+	  	martz_timer_count = 0;
+	  }
         }, 5000);
         setInterval(function(){
           $(".item").delay(0).effect("bounce", {distance: 5}, "slow");
