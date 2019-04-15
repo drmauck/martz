@@ -1,8 +1,36 @@
 <!doctype html>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 <style>
   * {
-  font-family: "Times New Roman", Times, serif;
+  font-family: Monospace;
+  color:black;
   }
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+  color: black;
+  font-family: Monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
 </style>
 <html lang="en">
   <head>
@@ -15,21 +43,250 @@
 
     <title>Anyone Can Write!</title>
   </head>
-  <body>
+  <body style="background-color:#EEEEEE;">
     <div class="container-fluid">
-    	<div class="row" style="height:15vh; display:table; padding-left:2em;">
-        <div class="col-xs-12" style="display:table-cell; vertical-align:middle;"><h1>Anyone Can Write!</h1></div> 
+      <!-- header row -->
+      <div class="row" style="height:100vh; padding:4em 4em 4em 4em">
+          <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white; display:flex; justify-content:center; text-align:center;">
+            <div class="typewriter" style="margin: 0 auto;">
+              <h1>Anyone Can Write!</h1>
+            </div>
+            <div style="">
+              <span class="down_arrow invisible">▼</span>
+            </div>
+          </div>
       </div>
-      <div class="row" style="height:70vh; background-color:#111111; opacity:0.5;">
-        <div class="col-xs-12" style="color:white; margin:2em 2em 2em 2em;"><h3>Long ago when I was just a small child of six years old, I was very sickly and as such often missed weeks of school at a time. I struggled at the Catholic school I was enrolled in, particularly in English. I was sent to a special classroom with another boy in order to fill the gaps that were missing. Unfortunately, due to my illness I failed first grade and then we moved to a place called Erie in Pennsylvania.</h3></div>
+      <div class="row" style="height:100px; position:relative">
+        <div class="col-xs-11" style="border:2px solid black; width:95%; position:absolute; left:0; bottom:0;"></div>
       </div>
-      <div class="row" style="height:15vh; border:1px solid blue;"></div>
-    </div>
+      <!-- grandma's house -->
+      <div class="row">
+        <div class="col-xs-12 col-md-8" style="position:relative; padding: 0em 0em 0em 0em;">
+          <img src="https://github.com/drmauck/martz/blob/master/grandmas_bg.png?raw=true" class="img-fluid bg_grandmas" alt="Grandma's House">
+          <!-- martz -->
+          <img src="https://github.com/drmauck/martz/blob/master/grandmas_martz.png?raw=true" class="img-fluid martz" style="position:absolute; top:0; left:0;">
+          <a class="click_martz click_martz_grandmas" style="height:32%; width:7%; position:absolute; left:42%; top:47%; cursor:pointer; z-index:2;"></a>
+          <!-- item -->
+          <img src="https://github.com/drmauck/martz/blob/master/grandmas_bear.png?raw=true" class="img-fluid item" style="position:absolute; top:0; left:0;">
+          <a class="click_item click_item_grandmas" style="height:10%; width:11%; position:absolute; left:72%; top:58%; cursor:pointer;"></a>
+        </div>
+        <!-- text right -->
+        <div class="col-xs-12 col-md-4 text_grandmas invisible" style="padding: 1em 1em 1em 1em;">
+          <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">
+              Text goes here!
+          </div>
+        </div>
+      </div>
+      <!-- spacer row -->
+      <div class="row" style="height:100px; position:relative">
+        <div class="col-xs-11" style="border:2px solid black; width:95%; position:absolute; right:0; bottom:0;"></div>
+      </div>
+      <!-- school1 -->
+      <div class="row">
+        <div class="col-xs-12 col-md-8 order-xs-1 order-md-2" style="position:relative; padding: 0em 0em 0em 0em;">
+          <img src="https://github.com/drmauck/martz/blob/master/school1_bg.png?raw=true" class="img-fluid" alt="School :(">
+          <!-- martz -->
+          <img src="https://github.com/drmauck/martz/blob/master/school1_martz.png?raw=true" class="img-fluid martz" style="position:absolute; top:0; left:0;">
+          <a class="click_martz click_martz_school1" style="height:29%; width:7%; position:absolute; left:46%; top:50%; cursor:pointer; z-index:2;"></a>
+          <!-- item -->
+          <img src="https://github.com/drmauck/martz/blob/master/school1_item.png?raw=true" class="img-fluid item" style="position:absolute; top:0; left:0;">
+          <a class="click_item click_item_school1" style="height:6%; width:11%; position:absolute; left:11.5%; top:59%; cursor:pointer;"></a>
+        </div>
+        <!-- text left -->
+        <div class="col-xs-12 col-md-4 order-xs-2 order-md-1 text_school1 invisible" style="padding: 2em 2em 2em 2em;">
+          <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">
+            Text goes here!
+          </div>
+        </div>
+      </div>
+      <!-- spacer row -->
+      <div class="row" style="height:100px; position:relative">
+        <div class="col-xs-11" style="border:2px solid black; width:95%; position:absolute; left:0; bottom:0;"></div>
+      </div>
+      <!-- summer! -->
+      <div class="row">
+        <div class="col-xs-12 col-md-8" style="position:relative; padding: 0em 0em 0em 0em;">
+          <img src="https://github.com/drmauck/martz/blob/master/summer_bg.png?raw=true" class="img-fluid bg_summer" alt="Summer!">
+          <!-- martz
+          <img src="https://github.com/drmauck/martz/blob/master/summer_martz.png?raw=true" class="img-fluid martz" style="position:absolute; top:0; left:0;">
+          <a class="click_martz click_martz_summer" style="height:32%; width:7%; position:absolute; left:42%; top:47%; cursor:pointer; z-index:2;"></a>-->  
+          <!-- item -->
+          <img src="https://github.com/drmauck/martz/blob/master/summer_item.png?raw=true" class="img-fluid item" style="position:absolute; top:0; left:0;">
+          <a class="click_item click_item_summer" style="height:22%; width:25%; position:absolute; left:74%; top:67%; cursor:pointer;"></a>
+        </div>
+        <!-- text right -->
+        <div class="col-xs-12 col-md-4 text_summer invisible" style="padding: 1em 1em 1em 1em;">
+          <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">
+              Text goes here!
+          </div>
+        </div>
+      </div>
+      <!-- spacer row -->
+      <div class="row" style="height:100px; position:relative">
+        <div class="col-xs-11" style="border:2px solid black; width:95%; position:absolute; right:0; bottom:0;"></div>
+      </div>
+      <!-- school1 -->
+      <div class="row">
+        <div class="col-xs-12 col-md-8 order-xs-1 order-md-2" style="position:relative; padding: 0em 0em 0em 0em;">
+          <img src="https://github.com/drmauck/martz/blob/master/school2_bg.png?raw=true" class="img-fluid" alt="School :)">
+          <!-- martz -->
+          <img src="https://github.com/drmauck/martz/blob/master/school2_martz.png?raw=true" class="img-fluid martz" style="position:absolute; top:0; left:0;">
+          <a class="click_martz click_martz_school2" style="height:29%; width:7%; position:absolute; left:47%; top:51%; cursor:pointer; z-index:2;"></a>
+          <!-- item -->
+          <img src="https://github.com/drmauck/martz/blob/master/school2_item.png?raw=true" class="img-fluid item" style="position:absolute; top:0; left:0;">
+          <a class="click_item click_item_school2" style="height:10%; width:7%; position:absolute; left:3.5%; top:9%; cursor:pointer;"></a>
+        </div>
+        <!-- text left -->
+        <div class="col-xs-12 col-md-4 order-xs-2 order-md-1 text_school2 invisible" style="padding: 2em 2em 2em 2em;">
+          <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">
+            Text goes here!
+          </div>
+        </div>
+      </div>
+      <!-- spacer row -->
+      <div class="row" style="height:100px; position:relative">
+        <div class="col-xs-11" style="border:2px solid black; width:95%; position:absolute; left:0; bottom:0;"></div>
+      </div>
+      <!-- pond -->
+      <div class="row">
+        <div class="col-xs-12 col-md-8" style="position:relative; padding: 0em 0em 0em 0em;">
+          <img src="https://github.com/drmauck/martz/blob/master/pond_bg.png?raw=true" class="img-fluid bg_grandmas" alt="Grandma's House">
+          <!-- martz -->
+          <img src="https://github.com/drmauck/martz/blob/master/pond_martz.png?raw=true" class="img-fluid martz" style="position:absolute; top:0; left:0;">
+          <a class="click_martz click_martz_pond" style="height:30%; width:7%; position:absolute; left:75%; top:56%; cursor:pointer; z-index:2;"></a>
+          <!-- item -->
+          <img src="https://github.com/drmauck/martz/blob/master/pond_item.png?raw=true" class="img-fluid item" style="position:absolute; top:0; left:0;">
+          <a class="click_item click_item_pond" style="height:12%; width:20%; position:absolute; left:8%; top:82%; cursor:pointer;"></a>
+        </div>
+        <!-- text right -->
+        <div class="col-xs-12 col-md-4 text_pond invisible" style="padding: 1em 1em 1em 1em;">
+          <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">
+              Text goes here!
+          </div>
+        </div>
+      </div>
+
+      <!-- spacer row -->
+      <div class="row" style="height:100px; position:relative">
+        <div class="col-xs-11" style="border:2px solid black; width:95%; position:absolute; right:0; bottom:0;"></div>
+      </div>
+      <!-- school3 -->
+      <div class="row">
+        <div class="col-xs-12 col-md-8 order-xs-1 order-md-2" style="position:relative; padding: 0em 0em 0em 0em;">
+          <img src="https://github.com/drmauck/martz/blob/master/school3_bg.png?raw=true" class="img-fluid" alt="I can write!">
+          <!-- martz -->
+          <img src="https://github.com/drmauck/martz/blob/master/school3_martz.png?raw=true" class="img-fluid martz" style="position:absolute; top:0; left:0;">
+          <a class="click_martz click_martz_school3" style="height:33%; width:10%; position:absolute; left:76%; top:31%; cursor:pointer; z-index:2;"></a>
+          <!-- item -->
+          <img src="https://github.com/drmauck/martz/blob/master/school3_item.png?raw=true" class="img-fluid item" style="position:absolute; top:0; left:0;">
+          <a class="click_item click_item_school3" style="height:12%; width:6%; position:absolute; left:2%; top:78%; cursor:pointer; z-index:2;"></a>
+          <img src="https://github.com/drmauck/martz/blob/master/school3_fg.png?raw=true" class="img-fluid" style="position:absolute; top:0; left:0;">
+        </div>
+        <!-- text left -->
+        <div class="col-xs-12 col-md-4 order-xs-2 order-md-1 text_school3 invisible" style="padding: 2em 2em 2em 2em;">
+          <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">
+            Text goes here!
+          </div>
+        </div>
+      </div>
+
+      <!-- fin -->
+      <div class="row" style="height:100px; position:relative">
+      </div>
+      <div class="row" style="height:100vh;">
+        
+      </div>
+  </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <script type = "text/javascript" language = "javascript">
+      $(document).ready(function () {
+        //intro down arrow
+        setTimeout(function() {
+          $(".down_arrow").replaceWith('<span class="down_arrow">▼</span>');
+          setInterval(function(){
+            $(".down_arrow").fadeOut(500);
+            $(".down_arrow").fadeIn(500);
+          }, 1500);
+        }, 3500);
+    
+        //timed bounce
+        //martz
+        setInterval(function(){
+          $(".martz").delay(2500).effect("bounce", {distance: 12}, "slow");
+        }, 5000);
+        //item
+        setInterval(function(){
+          $(".item").delay(5000).effect("bounce", {distance: 2}, "slow");
+        }, 5000);
+
+        //bounce on hover
+        //martz
+        $(".click_martz").mouseover(function(){
+          $(".martz").effect("bounce", {distance: 12}, "slow");
+        });
+        //item
+        $(".click_item").mouseover(function(){
+          $(".item").effect("bounce", {distance: 2}, "slow");
+        });
+
+        //replace text on click
+        //grandmas
+        $(".click_martz_grandmas").click(function(){
+          $(".text_grandmas").replaceWith('<div class="col-xs-12 col-md-4 text_grandmas" style="padding: 1em 2em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">Main Text!</div></div>');
+        });
+        $(".click_item_grandmas").click(function(){
+          $(".text_grandmas").replaceWith('<div class="col-xs-12 col-md-4 text_grandmas" style="padding: 1em 1em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">Extra Text!</div></div>');
+        });
+
+        //school1
+        $(".click_martz_school1").click(function(){
+          $(".text_school1").replaceWith('<div class="col-xs-12 col-md-4 text_school1" style="padding: 1em 1em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">Main Text!</div></div>');
+        });
+
+        $(".click_item_school1").click(function(){
+          $(".text_school1").replaceWith('<div class="col-xs-12 col-md-4 text_school1" style="padding: 1em 1em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">Extra Text!</div></div>');
+        });
+
+        //summer!
+        $(".click_item_summer").click(function(){
+          $(".text_summer").replaceWith('<div class="col-xs-12 col-md-4 text_summer" style="padding: 1em 1em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">Main Text!</div></div>');
+        });
+
+        //school2
+        $(".click_martz_school2").click(function(){
+          $(".text_school2").replaceWith('<div class="col-xs-12 col-md-4 text_school2" style="padding: 1em 1em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">Main Text!</div></div>');
+        });
+
+        $(".click_item_school2").click(function(){
+          $(".text_school2").replaceWith('<div class="col-xs-12 col-md-4 text_school2" style="padding: 1em 1em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">Extra Text!</div></div>');
+        });
+
+        //pond
+        $(".click_martz_pond").click(function(){
+          $(".text_pond").replaceWith('<div class="col-xs-12 col-md-4 text_pond" style="padding: 1em 1em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">Main Text!</div></div>');
+        });
+
+        $(".click_item_pond").click(function(){
+          $(".text_pond").replaceWith('<div class="col-xs-12 col-md-4 text_pond" style="padding: 1em 1em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">Extra Text!</div></div>');
+        });
+
+        //school2
+        $(".click_martz_school3").click(function(){
+          $(".text_school3").replaceWith('<div class="col-xs-12 col-md-4 text_school3" style="padding: 1em 1em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">Main Text!</div></div>');
+        });
+
+        $(".click_item_school3").click(function(){
+          $(".text_school3").replaceWith('<div class="col-xs-12 col-md-4 text_school3" style="padding: 1em 1em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">Extra Text!</div></div>');
+        });
+
+      });  
+    </script>
   </body>
 </html>
