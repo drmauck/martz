@@ -328,6 +328,7 @@
 	      			var martz_timer_count		= 0;
 				var clicked_grandmas 		= 0;
 				var clicked_school1 		= 0;
+	      			var clicked_summer = 0;
 				var clicked_school2 		= 0;
 				var clicked_pond 		    = 0;
 				var clicked_underwater 	= 0;
@@ -375,6 +376,16 @@
 		} else if(clicked_school1 == 1) {
 			$(".item_school1").effect("bounce", {distance: item_bounce}, "slow");
 		}
+		
+		//summer
+		$(".martz_summer").effect("bounce", {distance: martz_bounce}, "slow");
+		
+		//school2
+		if(clicked_school2 == 0) {
+			$(".martz_school2").effect("bounce", {distance: martz_bounce}, "slow");
+		} else if(clicked_school2 == 1) {
+			$(".item_school2").effect("bounce", {distance: item_bounce}, "slow");
+		}		
 	}, 5000);
 	
 	      
