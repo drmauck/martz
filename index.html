@@ -324,7 +324,7 @@
     <script type = "text/javascript" language = "javascript">
 					
       $(document).ready(function () {
-	alert("12:35");
+	alert("12:41");
 	      			var martz_timer_count		= 0;
 				var clicked_grandmas 		= 0;
 				var clicked_school1 		= 0;
@@ -332,6 +332,8 @@
 				var clicked_pond 		    = 0;
 				var clicked_underwater 	= 0;
 				var clicked_school3 		= 0;
+	      			var martz_bounce = 15;
+	      			var item_bounce = 5;
 	
         //intro down arrow blink
         setTimeout(function() {
@@ -343,10 +345,10 @@
         }, 3500);
     
         //timed bounce
-  
+  /*
 	setInterval(function(){
 	  if(martz_timer_count < 2) {
-          	$(".martz").effect("bounce", {distance: 15}, "slow");
+          	$(".martz").effect("bounce", {distance: martzbounce}, "slow");
 		martz_timer_count++;
 	  } else {
 	  	martz_timer_count = 0;
@@ -358,6 +360,19 @@
 		$(".item_grandmas").effect("bounce", {distance: 15}, "slow");
           }
         }, 15000);
+	    */  
+	setInterval(function(){
+		//grandma's
+		if(martz_timer_count < 2) {
+			$(".martz").effect("bounce", {distance: martz_bounce}, "slow");
+			martz_timer_count++;
+		} else if(clicked_grandmas == 1){
+			$(".item_grandmas").effect("bounce", {distance: item_bounce}, "slow");
+			martz_timer_count = 0;
+		} else {
+			martz_timer_count = 0;
+		}
+	}
 	      
         //bounce on hover
         //martz
