@@ -324,7 +324,7 @@
     <script type = "text/javascript" language = "javascript">
 	    
       $(document).ready(function () {
-	alert("1:11");
+	alert("1:16");
 	      			var martz_timer_count		= 0;
 				var clicked_grandmas 		= 0;
 				var clicked_school1 		= 0;
@@ -368,7 +368,8 @@
 		} else if(clicked_grandmas == 1) {
 			$(".item_grandmas").effect("bounce", {distance: item_bounce}, "slow");
 		}
-		
+	}, 5000);
+	setInterval(function(){
 		//school1
 		if(clicked_school1 == 0) {
 			$(".martz_schoo11").effect("bounce", {distance: martz_bounce}, "slow");
@@ -376,6 +377,7 @@
 			$(".item_school1").effect("bounce", {distance: item_bounce}, "slow");
 		}
 	}, 5000);
+	
 	      
         //bounce on hover
         //martz
