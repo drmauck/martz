@@ -45,6 +45,7 @@
   </head>
   <body style="background-color:#EEEEEE;">
     <div class="container-fluid">
+
       <!-- header row -->
       <div class="row" style="height:100vh; padding:4em 4em 4em 4em">
           <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white; display:flex; justify-content:center; text-align:center;">
@@ -59,6 +60,7 @@
       <div class="row" style="height:100px; position:relative">
         <div class="col-xs-11" style="border:2px solid black; width:95%; position:absolute; left:0; bottom:0;"></div>
       </div>
+
       <!-- grandma's house -->
       <div class="row">
         <div class="col-xs-12 col-md-8" style="position:relative; padding: 0em 0em 0em 0em;">
@@ -77,10 +79,12 @@
           </div>
         </div>
       </div>
+
       <!-- spacer row -->
       <div class="row" style="height:100px; position:relative">
         <div class="col-xs-11" style="border:2px solid black; width:95%; position:absolute; right:0; bottom:0;"></div>
       </div>
+
       <!-- school1 -->
       <div class="row">
         <div class="col-xs-12 col-md-8 order-xs-1 order-md-2" style="position:relative; padding: 0em 0em 0em 0em;">
@@ -99,10 +103,12 @@
           </div>
         </div>
       </div>
+
       <!-- spacer row -->
       <div class="row" style="height:100px; position:relative">
         <div class="col-xs-11" style="border:2px solid black; width:95%; position:absolute; left:0; bottom:0;"></div>
       </div>
+
       <!-- summer! -->
       <div class="row">
         <div class="col-xs-12 col-md-8" style="position:relative; padding: 0em 0em 0em 0em;">
@@ -111,8 +117,8 @@
           <img src="https://github.com/drmauck/martz/blob/master/summer_martz.png?raw=true" class="img-fluid martz" style="position:absolute; top:0; left:0;">
           <a class="click_martz click_martz_summer" style="height:32%; width:7%; position:absolute; left:42%; top:47%; cursor:pointer; z-index:2;"></a>-->  
           <!-- item -->
-          <img src="https://github.com/drmauck/martz/blob/master/summer_item.png?raw=true" class="img-fluid item" style="position:absolute; top:0; left:0;">
-          <a class="click_item click_item_summer" style="height:22%; width:25%; position:absolute; left:74%; top:67%; cursor:pointer;"></a>
+          <img src="https://github.com/drmauck/martz/blob/master/summer_item.png?raw=true" class="img-fluid martz" style="position:absolute; top:0; left:0;">
+          <a class="click_martz click_martz_summer" style="height:22%; width:25%; position:absolute; left:74%; top:67%; cursor:pointer;"></a>
         </div>
         <!-- text right -->
         <div class="col-xs-12 col-md-4 text_summer invisible" style="padding: 1em 1em 1em 1em;">
@@ -121,10 +127,12 @@
           </div>
         </div>
       </div>
+
       <!-- spacer row -->
       <div class="row" style="height:100px; position:relative">
         <div class="col-xs-11" style="border:2px solid black; width:95%; position:absolute; right:0; bottom:0;"></div>
       </div>
+
       <!-- school1 -->
       <div class="row">
         <div class="col-xs-12 col-md-8 order-xs-1 order-md-2" style="position:relative; padding: 0em 0em 0em 0em;">
@@ -143,10 +151,12 @@
           </div>
         </div>
       </div>
+
       <!-- spacer row -->
       <div class="row" style="height:100px; position:relative">
         <div class="col-xs-11" style="border:2px solid black; width:95%; position:absolute; left:0; bottom:0;"></div>
       </div>
+
       <!-- pond -->
       <div class="row">
         <div class="col-xs-12 col-md-8" style="position:relative; padding: 0em 0em 0em 0em;">
@@ -170,6 +180,7 @@
       <div class="row" style="height:100px; position:relative">
         <div class="col-xs-11" style="border:2px solid black; width:95%; position:absolute; right:0; bottom:0;"></div>
       </div>
+
       <!-- school3 -->
       <div class="row">
         <div class="col-xs-12 col-md-8 order-xs-1 order-md-2" style="position:relative; padding: 0em 0em 0em 0em;">
@@ -217,14 +228,10 @@
         }, 3500);
     
         //timed bounce
-        //martz
         setInterval(function(){
-          $(".martz").delay(2500).effect("bounce", {distance: 12}, "slow");
-        }, 5000);
-        //item
-        setInterval(function(){
-          $(".item").delay(5000).effect("bounce", {distance: 2}, "slow");
-        }, 5000);
+          $(".martz").effect("bounce", {distance: 12}, "slow");
+          $(".item").delay(5000).effect("bounce", {distance: 3}, "slow");
+        }, 10000);
 
         //bounce on hover
         //martz
@@ -233,7 +240,7 @@
         });
         //item
         $(".click_item").mouseover(function(){
-          $(".item").effect("bounce", {distance: 2}, "slow");
+          $(".item").effect("bounce", {distance: 3}, "slow");
         });
 
         //replace text on click
@@ -255,7 +262,7 @@
         });
 
         //summer!
-        $(".click_item_summer").click(function(){
+        $(".click_martz_summer").click(function(){
           $(".text_summer").replaceWith('<div class="col-xs-12 col-md-4 text_summer" style="padding: 1em 1em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">Main Text!</div></div>');
         });
 
