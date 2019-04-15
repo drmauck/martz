@@ -353,7 +353,10 @@
 	  }
         }, 5000);
         setInterval(function(){
-          $(".item").delay(0).effect("bounce", {distance: 5}, "slow");
+          //$(".item").delay(0).effect("bounce", {distance: 5}, "slow");
+	  if(clicked_grandmas == 1){ 
+		$(".item_grandmas").effect("bounce", {distance: 15}, "slow");
+          }
         }, 15000);
 	      
         //bounce on hover
