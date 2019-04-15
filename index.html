@@ -53,8 +53,17 @@
       <!-- header row -->
       <div class="row" style="height:100vh; padding:4em 4em 4em 4em">
           <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white; display:flex; justify-content:center; text-align:center;">
-            <div class="typewriter" style="margin: 0 auto;">
+            <div class="typewriter d-none d-sm-block" style="margin: 0 auto;">
               <h1>Anyone Can Write!</h1>
+            </div>
+            <div class="typewriter d-sm-none" style="margin: 0 auto;">
+              <h1>Anyone<br></h1>
+            </div>
+            <div class="typewriter d-sm-none" style="margin: 0 auto;">
+              <h1>Can<br></h1>
+            </div>
+            <div class="typewriter d-sm-none" style="margin: 0 auto;">
+              <h1>Write!</h1>
             </div>
             <div style="">
               <span class="down_arrow invisible">▼</span>
@@ -285,8 +294,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
     <script type = "text/javascript" language = "javascript">
+     
       $(document).ready(function () {
-        //intro down arrow
+        //intro down arrow blink
         setTimeout(function() {
           $(".down_arrow").replaceWith('<span class="down_arrow">▼</span>');
           setInterval(function(){
