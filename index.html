@@ -80,7 +80,6 @@
     <title>Anyone Can Write!</title>
   </head>
   <body style="background-color:#EEEEEE;">
-6
     <div class="container-fluid">
 
       <!-- header row -->
@@ -89,10 +88,10 @@
             <div class="typewriter d-none d-md-block" style="margin: 0 auto;">
               <h1>Anyone Can Write!</h1>
             </div>
-            <div class="typewriter1 d-md-none" style="margin: 0 auto;">
+            <div class="typewriter d-md-none" style="margin: 0 auto;">
               <h1>Anyone<br></h1>
             </div>
-            <div class="typewriter2 d-md-none" style="margin: 0 auto;">
+            <div class="typewriter d-md-none" style="margin: 0 auto;">
               <h1>Can<br></h1>
             </div>
             <div class="typewriter d-md-none" style="margin: 0 auto;">
@@ -208,10 +207,11 @@
           <a class="click_martz click_martz_school2" style="height:44%; width:7%; position:absolute; left:47%; top:36%; cursor:pointer; z-index:2;"></a>
           <!-- item -->
           <img src="https://github.com/drmauck/martz/blob/master/school2_item.png?raw=true" class="img-fluid item item_school2" style="position:absolute; top:0; left:0;">
-          <a class="click_item click_item_school2" style="height:13%; width:7%; position:absolute; left:3.5%; top:6%; cursor:pointer;"></a>
-	  <!-- sue -->
-	  <img src="https://github.com/drmauck/martz/blob/master/school2_sue.png?raw=true" class="img-fluid item sue_school2" style="position:absolute; top:0; left:0;">
-          <a class="click_item click_sue_school2" style="height:26%; width:7%; position:absolute; left:75%; top:38%; cursor:pointer; border:1px solid red;"></a>
+          <a class="click_item click_item_school2" style="height:13%; width:7%; position:absolute; left:3.5%; top:6%; cursor:pointer; z-index:2;"></a>
+      	  <!-- sue -->
+      	  <img src="https://github.com/drmauck/martz/blob/master/school2_sue.png?raw=true" class="img-fluid sue sue_school2" style="position:absolute; top:0; left:0;">
+          <a class="click_sue click_sue_school2" style="height:36%; width:7%; position:absolute; left:75%; top:28%; cursor:pointer; z-index:2"></a>
+          <img src="https://github.com/drmauck/martz/blob/master/school2_fg.png?raw=true" class="img-fluid" style="position:absolute; top:0; left:0;">
         </div>
         <!-- text left -->
         <div class="col-xs-12 col-xl-4 order-xs-2 order-xl-1 text_school2 invisible" style="padding: 2em 2em 2em 2em;">
@@ -369,8 +369,8 @@
 				var clicked_pond 		    = 0;
 				var clicked_underwater 	= 0;
 				var clicked_school3 		= 0;
-	      			var martz_bounce = 3;
-	      			var item_bounce = 3;
+	      			var martz_bounce = 12;
+	      			var item_bounce = 5;
 	
         //intro down arrow blink
         setTimeout(function() {
@@ -421,7 +421,9 @@
 			$(".martz_school2").effect("bounce", {distance: martz_bounce}, "slow");
 		} else if(clicked_school2 == 1) {
 			$(".item_school2").effect("bounce", {distance: item_bounce}, "slow");
-		}
+		} else {
+      (".sue").effect("bounce", {distance: item_bounce}, "slow");
+    }
 		
 		//pond
 		if(clicked_pond == 0) {
@@ -443,7 +445,7 @@
 		} else if(clicked_school3 == 1) {
 			$(".item_school3").effect("bounce", {distance: item_bounce}, "slow");
 		}
-	}, 10000);
+	}, 5000);
 	
 	      
         //bounce on hover
@@ -454,6 +456,10 @@
         //item
         $(".click_item").mouseenter(function(){
           $(".item").effect("bounce", {distance: 5}, "slow");
+        });
+        //sue
+        $(".click_sue").mouseenter(function(){
+          $(".sue").effect("bounce", {distance: 5}, "slow");
         });
 
         //replace text on click
@@ -496,14 +502,14 @@
 
         $(".click_item_school2").click(function(){
           if(clicked_school2 == 1){
-          	$(".text_school2").replaceWith('<div class="col-xs-12 col-xl-4 text_school2" style="padding: 1em 1em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">“Teachers often say that kids hate writing. But maybe what they hate is the kind of writing we make them to do” (Daniels et al. 3)<br><br>“I create opportunities for students to reflect upon their past experiences and current relationships with their writing practices and explore ways to connect their existing educational motivations with writing” (Reid 189).</div></div>');
+          	$(".text_school2").replaceWith('<div class="col-xs-12 col-xl-4 text_school2" style="padding: 1em 1em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">“Teachers often say that kids hate writing. But maybe what they hate is the kind of writing we make them to do” (Daniels et al. 3)</div></div>');
           	clicked_school2 = 2;
 	  }
         });
 	      
         $(".click_sue_school2").click(function(){
           if(clicked_school2 == 2){
-          	$(".text_school2").replaceWith('<div class="col-xs-12 col-xl-4 text_school2" style="padding: 1em 1em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">“Teachers often say that kids hate writing. But maybe what they hate is the kind of writing we make them to do” (Daniels et al. 3)<br><br>“I create opportunities for students to reflect upon their past experiences and current relationships with their writing practices and explore ways to connect their existing educational motivations with writing” (Reid 189).</div></div>');
+          	$(".text_school2").replaceWith('<div class="col-xs-12 col-xl-4 text_school2" style="padding: 1em 1em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">“I create opportunities for students to reflect upon their past experiences and current relationships with their writing practices and explore ways to connect their existing educational motivations with writing” (Reid 189).</div></div>');
           	clicked_school2 = 0;
 	  }
         });
