@@ -189,6 +189,9 @@
           <!-- item -->
           <img src="https://github.com/drmauck/martz/blob/master/school2_item.png?raw=true" class="img-fluid item item_school2" style="position:absolute; top:0; left:0;">
           <a class="click_item click_item_school2" style="height:13%; width:7%; position:absolute; left:3.5%; top:6%; cursor:pointer;"></a>
+	  <!-- sue -->
+	  <img src="https://github.com/drmauck/martz/blob/master/school2_sue.png?raw=true" class="img-fluid item sue_school2" style="position:absolute; top:0; left:0;">
+          <a class="click_item click_sue_school2" style="height:13%; width:7%; position:absolute; left:3.5%; top:6%; cursor:pointer;"></a>
         </div>
         <!-- text left -->
         <div class="col-xs-12 col-xl-4 order-xs-2 order-xl-1 text_school2 invisible" style="padding: 2em 2em 2em 2em;">
@@ -474,10 +477,18 @@
         $(".click_item_school2").click(function(){
           if(clicked_school2 == 1){
           	$(".text_school2").replaceWith('<div class="col-xs-12 col-xl-4 text_school2" style="padding: 1em 1em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">“Teachers often say that kids hate writing. But maybe what they hate is the kind of writing we make them to do” (Daniels et al. 3)<br><br>“I create opportunities for students to reflect upon their past experiences and current relationships with their writing practices and explore ways to connect their existing educational motivations with writing” (Reid 189).</div></div>');
+          	clicked_school2 = 2;
+	  }
+        });
+	      
+        $(".click_sue_school2").click(function(){
+          if(clicked_school2 == 2s){
+          	$(".text_school2").replaceWith('<div class="col-xs-12 col-xl-4 text_school2" style="padding: 1em 1em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">“Teachers often say that kids hate writing. But maybe what they hate is the kind of writing we make them to do” (Daniels et al. 3)<br><br>“I create opportunities for students to reflect upon their past experiences and current relationships with their writing practices and explore ways to connect their existing educational motivations with writing” (Reid 189).</div></div>');
           	clicked_school2 = 0;
 	  }
         });
-
+	      
+	      
         //pond
         $(".click_martz_pond").click(function(){
           $(".text_pond").replaceWith('<div class="col-xs-12 col-xl-4 text_pond" style="padding: 1em 1em 1em 1em;"><div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 2em 2em 2em 2em; width:100%; height:100%; background-color:white;">One sunny afternoon, Sue and I had taken a break and were walking the campus grounds while eating a snack. We walked to a large pond close by that happened to have an old wooden bridge over the middle of the murky waters. Walking onto the bridge, we talked about nothing in particular. However, in a spirited moment during our conversation my sandal slipped off and plummeted to the dark waters below. Mass hysteria followed after my cherished sandal abandoned me. My heart dropped, panic gripped me at every side. Sue flew into action instead of standing in motionless horror, believing there was hope to rescue my sandal no matter how desperate the situation seemed. Looking around us, desperate, we searched for anything that could aid in our rescue attempt.</div></div>');
